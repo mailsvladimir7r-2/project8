@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каталог послуг — Семантична сторінка</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page">
+
+  <header class="header">
+    <div class="header__container">
+      <a href="#" class="logo">DevStudio</a>
+      <nav class="nav" aria-label="Головна навігація">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#services" class="nav__link nav__link--active">Послуги</a></li>
+          <li class="nav__item"><a href="#about" class="nav__link">Про нас</a></li>
+          <li class="nav__item"><a href="#portfolio" class="nav__link">Проєкти</a></li>
+          <li class="nav__item"><a href="#contacts" class="nav__link">Контакти</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main" id="services">
+    <div class="main__container">
+      <h1 class="main__title">Наші напрямки розробки</h1>
+      
+      <section class="catalog" aria-label="Список послуг">
+        <article class="card">
+          <div class="card__header">
+            <span class="card__badge card__badge--popular">Популярне</span>
+            <h2 class="card__title">Супернадмасштабованавебплатформа для бізнесу</h2>
+          </div>
+          <p class="card__description">
+            Розробка сучасних вебзастосунків із семантичною архітектурою та високою швидкістю завантаження.
+          </p>
+          <div class="card__footer">
+            <span class="card__price">від 15 000 ₴</span>
+            <a href="#order" class="card__button">Замовити</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <span class="card__badge">Дизайн</span>
+            <h2 class="card__title">Адаптивний UI/UX дизайн інтерфейсів</h2>
+          </div>
+          <p class="card__description">
+            Проєктування зручних та зрозумілих користувацьких сценаріїв для мобільних і десктопних пристроїв.
+          </p>
+          <div class="card__footer">
+            <span class="card__price">від 10 000 ₴</span>
+            <a href="#order" class="card__button">Замовити</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <span class="card__badge">Оптимізація</span>
+            <h2 class="card__title">Технічний аудит та прискорення сайтів</h2>
+          </div>
+          <p class="card__description">
+            Перевірка доступності, оптимізація CSS Grid та Flexbox сіток, виправлення горизонтального скролу.
+          </p>
+          <div class="card__footer">
+            <span class="card__price">від 8 000 ₴</span>
+            <a href="#order" class="card__button">Замовити</a>
+          </div>
+        </article>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer" id="contacts">
+    <div class="footer__container">
+      <p class="footer__text">&copy; 2026 DevStudio. Усі права захищено.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

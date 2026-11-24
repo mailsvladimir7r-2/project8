@@ -1,0 +1,190 @@
+/* Базові налаштування */
+.page {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  color: #1f2937;
+  background-color: #f3f4f6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Шапка та навігація (Flexbox) */
+.header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 16px 20px;
+}
+
+.header__container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: #4b5563;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav__link:hover {
+  color: #2563eb;
+}
+
+.nav__link--active {
+  color: #2563eb;
+  font-weight: 700;
+}
+
+/* Основний контент */
+.main {
+  flex: 1;
+  padding: 40px 20px;
+}
+
+.main__container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.main__title {
+  margin: 0 0 24px 0;
+  font-size: 1.875rem;
+}
+
+/* Сітка карток (CSS Grid) */
+.catalog {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* Компонент картки */
+.card {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  min-width: 0; /* Захист Grid/Flex-елемента від розтягування */
+}
+
+.card__header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  min-width: 0; /* Обов'язково для вкладених flex-контейнерів з текстом */
+}
+
+.card__badge {
+  background-color: #e5e7eb;
+  color: #374151;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.card__badge--popular {
+  background-color: #dbeafe;
+  color: #1d4ed8;
+}
+
+.card__title {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #111827;
+  max-width: 100%;
+  overflow-wrap: anywhere; /* Перенос наддовгих слів без горизонтального скролу */
+}
+
+.card__description {
+  margin: 0;
+  color: #4b5563;
+  font-size: 0.95rem;
+  overflow-wrap: anywhere;
+}
+
+.card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid #f3f4f6;
+}
+
+.card__price {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #111827;
+}
+
+.card__button {
+  display: inline-block;
+  background-color: #2563eb;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.card__button:hover {
+  background-color: #1d4ed8;
+}
+
+/* Підвал */
+.footer {
+  background-color: #ffffff;
+  border-top: 1px solid #e5e7eb;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer__container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footer__text {
+  margin: 0;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+/* Адаптивність для вузьких екранів */
+@media (max-width: 768px) {
+  .catalog {
+    grid-template-columns: 1fr;
+  }
+}
